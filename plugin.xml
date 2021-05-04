@@ -31,9 +31,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <framework src="AppTrackingTransparency.framework" weak="true" />
 
-        <edit-config target="NSUserTrackingUsageDescription" file="*-Info.plist">
-            <string>To gather application usage analytics for providing better user experience.</string>
-        </edit-config>
+        <config-file target="*-Info.plist" parent="NSUserTrackingUsageDescription">
+          <string>To gather application usage analytics for providing better user experience.</string>
+        </config-file>  
     </platform>
 
 </plugin>
