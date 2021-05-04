@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-trackingtransparency",
+  "version": "1.0.0",
+  "description": "Cordova plugin to request tracking transparency",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "cordova-plugin-trackingtransparency",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterwebdev/cordova-plugin-trackingtransparency.git"
+  },
+  "author": "Master dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masterwebdev/cordova-plugin-trackingtransparency/issues"
+  },
+  "homepage": "https://github.com/masterwebdev/cordova-plugin-trackingtransparency#readme",
+  "funding": "https://github.com/masterwebdev/cordova-plugin-trackingtransparency?sponsor=1",
+  "keywords": [
+    "cordova",
+    "analytics",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "version": "perl -p -i -e 's/(version=)\"\\d+\\.\\d+\\.\\d+\"/$1\"'$npm_package_version'\"$2/' plugin.xml && git add plugin.xml",
+    "postversion": "git push && git push --tags"
+  }
+}

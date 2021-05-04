@@ -1,0 +1,35 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="cordova-plugin-trackingtransparency"
+      version="1.0.0">
+
+    <name>cordova-plugin-trackingtransparency</name>
+    <description>Cordova plugin to request tracking transparency</description>
+    <license>MIT</license>
+    <keywords>cordova</keywords>
+    <repo>https://github.com/masterwebdev/cordova-plugin-trackingtransparency</repo>
+    <issue>https://github.com/masterwebdev/cordova-plugin-trackingtransparency/issues</issue>
+
+    <js-module src="www/trackingtransparency.js" name="trackingtransparency">
+        <merges target="cordova.plugins.trackingtransparency" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-ios" version=">=4.3.0"/>
+    </engines>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="trackingtransparency">
+                <param name="ios-package" value="trackingtransparency" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/trackingtransparency.h" />
+        <source-file src="src/ios/trackingtransparency.m" />
+
+        <framework src="AppTrackingTransparency.framework" weak="true" />
+    </platform>
+
+</plugin>
