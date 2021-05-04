@@ -14,7 +14,7 @@
             };
         } else {
             resultData = @{
-                @"trackingPermission": @1
+                @"trackingPermission": @3
             };
         }
 
